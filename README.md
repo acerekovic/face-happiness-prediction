@@ -5,9 +5,8 @@ We release two Tensorflow models trained to estimate intensity of a face happine
 
 Models are released for non-commercial research purposes under the [Creative Commons Attribution-NonCommercial License](https://creativecommons.org/licenses/by-nc/4.0/) [5]. 
 
-If you find the framework/models to be useful in your research work, please remember to cite the following works:
+If you find the framework/models to be useful in your research work, a citation to the following paper would be appreciated:
 
-[1]: Abhinav Dhall, Roland Goecke, Jyoti Joshi, Jesse Hoey & Tom Gedeon, EmotiW 2016: Video and Group-level Emotion Recognition Challenges, ACM ICMI 2016.
 [2]: A. Cerekovic: A deep look into group happiness prediction from images, in Proceedings of the 2016 ACM on International Conference on Multimodal Interaction ICMI'16, preprint
 
 Happy coding (and research)!
