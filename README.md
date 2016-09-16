@@ -1,9 +1,9 @@
-Tensorflow Face Happiness prediction
+Face Happiness prediction
 ====================================
 
-We release two Tensorflow models trained to estimate intensity of a face happiness from an image. One of these models accompanies our submission to the ICMI'16; A. Cerekovic: A deep look into group happiness prediction from images [2]. We also provide a framework for model training and evaluation. Framework is tested on Ubuntu 14.04 machine equipped with Intel i7-4790K @ 4.00GHz CPU, 16 Gb RAM, and a GeForce GTX 980 Ti GPU, with Tensorflow 0.8.
+We release two Tensorflow models trained to estimate intensity of a face happiness from an image. One of these models accompanies our submission to the ICMI'16 [2]. We also provide a framework for model training and evaluation. Framework is tested on Ubuntu 14.04 machine equipped with Intel i7-4790K @ 4.00GHz CPU, 16 Gb RAM, and a GeForce GTX 980 Ti GPU, with Tensorflow 0.8.
 
-Models are released for non-commercial research purposes under the [Creative Commons Attribution-NonCommercial License](https://creativecommons.org/licenses/by-nc/4.0/) [5]. 
+Models are released for non-commercial research purposes under the [Creative Commons Attribution-NonCommercial License](https://creativecommons.org/licenses/by-nc/4.0/). 
 
 If you find the framework/models to be useful in your research work, a citation to the following paper would be appreciated:
 
@@ -26,13 +26,13 @@ Upon running the download_data.sh, the models will be located in the ./data/mode
 4 - big laugh
 5 - thrilled
 
-Models are trained with the HAPPEI training set, released for the [EmotiW 2016 challenge, subchallenge #2](https://sites.google.com/site/emotiw2016/challenge-details) [1][7], and with manually annotated images collected in [Gallager and Chen, 2009][4]. Training dataset contains 3600 images, and is augmented 10 times.
+Models are trained with the HAPPEI training set [1], and with manually annotated images collected in [Gallager and Chen, 2009][3]. Training dataset contains 3600 images, and is augmented 10 times.
 
 The first model, GoogLeNet-FC model, is introduced in [2]. Given the face image of size 256x256x3, the model is able to estimate the intensity of happiness with 49.1% accuracy. The precision of the model is measured on the HAPPEI validation set, extracted with Face Detection model from [2]. Accuracy of the provided GoogLeNet-FC model is higher than 47% (reported in [2]) because of additional training samples introduced to the HAPPEI training set.
 
 The second model VGG16 has 50.3 % accuracy, measured on the same validation set. Image size for VGG16 is 224x224x3.
 
-The code for loading the GoogLeNet (utils/googlenet_load.py) is modified version of the code from the TensorBox framework [4]. The initial weights for the GoogLeNet model are also taken from [4]. The code for VGG16 model is modification of [6]. The code is rewritten and extended for the purpose of training and testing with Tensorflow. 
+The code for loading the GoogLeNet (utils/googlenet_load.py) is modified version of the code from the [TensorBox framework] [4]. The initial weights for the GoogLeNet model also originate from the same source. The code for VGG16 model is modification of [Davi Frossard's code][6]. The code is rewritten and extended for the purpose of training and testing with Tensorflow. 
 
 Demo
 ------
@@ -122,6 +122,7 @@ References
 ----------
 
   [1]: Abhinav Dhall, Roland Goecke, Jyoti Joshi, Jesse Hoey & Tom Gedeon, EmotiW 2016: Video and Group-level Emotion Recognition Challenges, ACM ICMI 2016. link: https://sites.google.com/site/emotiw2016/challenge-details
+  
   [2]: A. Cerekovic: A deep look into group happiness prediction from images, in Proceedings of the 2016 ACM on International Conference on Multimodal Interaction ICMI'16, preprint
   [3]: http://chenlab.ece.cornell.edu/people/Andy/Andy_files/cvpr09.pdf
   [4]: https://github.com/Russell91/TensorBox
